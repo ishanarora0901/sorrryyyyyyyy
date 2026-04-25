@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sorry Bhabhi ❤️</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: linear-gradient(to right, #ff9a9e, #fad0c4);
+  overflow: hidden;
+}
+
+/* Slides */
+.slide {
+  display: none;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.active {
+  display: flex;
+}
+
+/* Buttons */
+button {
+  padding: 12px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ff4d6d;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background-color: #ff1e4d;
+}
+
+h1 {
+  color: white;
+  animation: fadeIn 2s ease;
+}
+
+h2 {
+  color: white;
+}
+
+/* Teddy */
+.teddy {
+  font-size: 80px;
+  animation: bounce 2s infinite;
+}
+
+/* Gift */
+.gift {
+  font-size: 70px;
+  animation: pop 1.5s ease;
+}
+
+/* Flowers */
+.flower {
+  position: absolute;
+  font-size: 25px;
+  animation: float 6s linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-10vh) rotate(360deg);
+  }
+}
+
+/* Text animation */
+.extra {
+  color: white;
+  font-size: 18px;
+  opacity: 0;
+  animation: fadeText 1s forwards;
+  margin-top: 5px;
+}
+
+.delay1 { animation-delay: 2s; }
+.delay2 { animation-delay: 4s; }
+.delay3 { animation-delay: 6s; }
+
+@keyframes fadeText {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Other animations */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pop {
+  0% { transform: scale(0); }
+  80% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- Slide 1 -->
+<div class="slide active" id="slide1">
+  <h1>Bhabhi ji aven kyo krde oo 🥺💔</h1>
+  <h2>Khalo trs jwak te😭</h2>
+
+  <button onclick="showSlide(2)">Theek aa krta maaf ❤️</button>
+  <button onclick="showSlide(3)">Huh mai gusse aa 😤</button>
+</div>
+
+<!-- Slide 2 -->
+<div class="slide" id="slide2">
+  <div class="teddy">🧸</div>
+  <h1>Thank you vanshuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu ji 😭❤️</h1>
+  <h2>Tusi best ho serious na lyio mnu mzak krn di adat aa 💖</h2>
+</div>
+
+<!-- Slide 3 (FULL ENHANCED) -->
+<div class="slide" id="slide3">
+
+  <!-- Flowers -->
+  <div class="flower" style="left:10%">🌸</div>
+  <div class="flower" style="left:30%; animation-delay:2s;">🌼</div>
+  <div class="flower" style="left:50%; animation-delay:4s;">🌷</div>
+  <div class="flower" style="left:70%; animation-delay:1s;">🌺</div>
+  <div class="flower" style="left:90%; animation-delay:3s;">💐</div>
+
+  <!-- Gift + Teddy -->
+  <div class="gift">🎁</div>
+  <div class="teddy">🧸</div>
+
+  <h1>Oye gussa na karo 😭</h1>
+  <h2>Mainu maaf kr do plzzz 🥺💔</h2>
+
+  <!-- Extra emotional lines -->
+  <p class="extra">Sachii gal aa... tusi gusse ch v cute lagde oo 🥺❤️</p>
+  <p class="extra delay1">Par jdo ignore krde oo na... dil thoda sad ho janda aa tuci he tan mere sweet and permanent j bhabhi hu 💔</p>
+  <p class="extra delay2">Main promise karda aa hun ton nhi bhulda 🤞</p>
+  <p class="extra delay3">Bas hun smile kar do te mnu maaf v pls bndriyeeeeeeee 😊💖</p>
+
+</div>
+
+<script>
+function showSlide(num) {
+  document.querySelectorAll('.slide').forEach(slide => {
+    slide.classList.remove('active');
+  });
+
+  document.getElementById('slide' + num).classList.add('active');
+}
+</script>
+
+</body>
+</html>
